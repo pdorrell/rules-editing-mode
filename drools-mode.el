@@ -6,6 +6,8 @@
 
 ;;; Author Philip Dorrell. Email: http://www.1729.com/email.html
 
+;;; Version Date: 27 Oct 2008
+
 ;;; Permission is hereby granted, free of charge, to any person obtaining a copy
 ;;; of this software and associated documentation files (the "Software"), to deal
 ;;; in the Software without restriction, including without limitation the rights
@@ -97,8 +99,8 @@ possibly preceded by whitespace."
 
 (defun drools-skip-to-previous-line()
   "Skip to previous line in Drools code which is at the same syntax level as the current line.
-   (Information about this position will be used to relatively indent the current line.)
-   If an opening bracket is hit, return a pair of the bracket and if there was any non-whitespace
+(Information about this position will be used to relatively indent the current line.)
+If an opening bracket is hit, return a pair of the bracket and if there was any non-whitespace
 after the bracket and sit at the start of that text. If not, move to first text on line, and return nil."
   (interactive)
   (beginning-of-line)
