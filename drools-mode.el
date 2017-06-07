@@ -40,7 +40,7 @@ possibly preceded by whitespace."
   "Drools commands and operators occuring within actions.")
 
 (defvar drools-toplevel-keywords 
-  '("rule" "end" "package" "import" "function" "global" "expander")
+  '("rule" "end" "package" "import" "function" "global" "expander" "declare")
   "Drools keywords that occur at top-level in source file, and should always be indented to 0")
 
 (defvar drools-section-keywords '("when" "then")
@@ -58,7 +58,7 @@ possibly preceded by whitespace."
   (regexp-for-keyword-at-start-of-line (append drools-section-keywords)) 
   "Regexp to match a line starting with a Drools section keyword" )
 
-(defvar drools-indenting-keyword-regexp (regexp-for-keywords '("rule" "when" "then"))
+(defvar drools-indenting-keyword-regexp (regexp-for-keywords '("rule" "when" "then" "declare"))
   "Regexp for Drools keywords which cause indent on following lines.")
 
 (defvar drools-tab-indent 4 "Default indentation for Drools mode")
